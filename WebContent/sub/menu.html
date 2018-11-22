@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>文件的上传与下载</title>
+<meta name="keywords" content="文件上传,upload,download" />
+<link href="../css/leftmenu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+function expandMenu(menu_id,img_id){
+var menuObj = $("#"+menu_id);
+var imgObj= $("#"+img_id);
+if(menuObj.css("display") == 'none'){
+menuObj.css('display',"");
+imgObj.attr('src',"images/open.png");
+}else{
+		menuObj.css('display',"none");
+imgObj.attr('src',"images/close.png");
+}
+}
+</script>
+</head>
+<body>
+<table width="160" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="500" valign="top" background="../images/idnbg1.gif">
+<!--导航菜单开始 -->
+<dl id="admin-mainnav">
+<dt><img id="img_1" src="../images/open.png" /><a onFocus="this.blur()" href="javascript:void(null)" onClick="expandMenu('menu_1','img_1')">文件</A></dt>
+<dd id="menu_1">
+<A title="文件上传" href="../upload.jsp" target="main">文件上传</A>
+<A title="文件下载" href="/File1/download?method=search1" target="main">文件下载</A>
+</dd>
+
+<dt><img id="img_7" src="images/open.png" /><a onFocus="this.blur()" href="javascript:void(null)" onClick="expandMenu('menu_7','img_7')">系统信息</A></dt>
+<dd id="menu_7">
+<p>Java Web文件上传与下载<br />
+<br/>
+<br/>
+<br/>
+作者:祝銘堅<br/>
+
+</p></dd>
+</dl>
+<!--导航菜单结束 -->
+</td></tr><tr><td height="7" background="images/idnbgfoot.gif"></td></tr></table>
+</body></html>
